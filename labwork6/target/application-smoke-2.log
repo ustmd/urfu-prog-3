@@ -1,0 +1,47 @@
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::               (v3.5.16)
+
+2026-10-14T21:44:59.339+05:00  INFO 79382 --- [labwork6] [           main] com.ustmd.labwork6.Labwork6Application   : Starting Labwork6Application v0.0.1-SNAPSHOT using Java 24.0.1 with PID 79382 (/Users/koral/Documents/ChatGPT/urfu-programming/labwork6/target/labwork6-0.0.1-SNAPSHOT.jar started by koral in /Users/koral/Documents/ChatGPT/urfu-programming/labwork6)
+2026-10-14T21:44:59.340+05:00  INFO 79382 --- [labwork6] [           main] com.ustmd.labwork6.Labwork6Application   : No active profile set, falling back to 1 default profile: "default"
+2026-10-14T21:44:59.625+05:00  INFO 79382 --- [labwork6] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-14T21:44:59.634+05:00  INFO 79382 --- [labwork6] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 5 ms. Found 0 JPA repository interfaces.
+2026-10-14T21:44:59.903+05:00  INFO 79382 --- [labwork6] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 0 (http)
+2026-10-14T21:44:59.912+05:00  INFO 79382 --- [labwork6] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-14T21:44:59.912+05:00  INFO 79382 --- [labwork6] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.55]
+2026-10-14T21:44:59.924+05:00  INFO 79382 --- [labwork6] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-10-14T21:44:59.924+05:00  INFO 79382 --- [labwork6] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 566 ms
+2026-10-14T21:44:59.980+05:00  INFO 79382 --- [labwork6] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-10-14T21:45:00.094+05:00  INFO 79382 --- [labwork6] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:file:/Users/koral/Documents/ChatGPT/urfu-programming/labwork6/target/http-db-97v78iky/students user=SA
+2026-10-14T21:45:00.095+05:00  INFO 79382 --- [labwork6] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-10-14T21:45:00.140+05:00  INFO 79382 --- [labwork6] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-10-14T21:45:00.163+05:00  INFO 79382 --- [labwork6] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.53.Final
+2026-10-14T21:45:00.180+05:00  INFO 79382 --- [labwork6] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-10-14T21:45:00.301+05:00  INFO 79382 --- [labwork6] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-14T21:45:00.352+05:00  INFO 79382 --- [labwork6] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-14T21:45:00.783+05:00  INFO 79382 --- [labwork6] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-14T21:45:00.799+05:00  INFO 79382 --- [labwork6] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-14T21:45:01.134+05:00  INFO 79382 --- [labwork6] [           main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:/Users/koral/Documents/ChatGPT/urfu-programming/labwork6/target/http-db-97v78iky/students'
+2026-10-14T21:45:01.184+05:00  INFO 79382 --- [labwork6] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 63019 (http) with context path '/'
+2026-10-14T21:45:01.192+05:00  INFO 79382 --- [labwork6] [           main] com.ustmd.labwork6.Labwork6Application   : Started Labwork6Application in 2.028 seconds (process running for 2.22)
+2026-10-14T21:45:01.272+05:00  INFO 79382 --- [labwork6] [1-auto-1-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-10-14T21:45:01.273+05:00  INFO 79382 --- [labwork6] [1-auto-1-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-10-14T21:45:01.273+05:00  INFO 79382 --- [labwork6] [1-auto-1-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2026-10-14T21:45:01.413+05:00  INFO 79382 --- [labwork6] [ionShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-10-14T21:45:01.415+05:00  INFO 79382 --- [labwork6] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-10-14T21:45:01.418+05:00  INFO 79382 --- [labwork6] [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-10-14T21:45:01.420+05:00  INFO 79382 --- [labwork6] [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-10-14T21:45:01.634+05:00  INFO 79382 --- [labwork6] [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

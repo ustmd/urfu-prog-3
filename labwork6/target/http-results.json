@@ -1,0 +1,631 @@
+{
+  "runner": "Python urllib against packaged JAR",
+  "requests": 41,
+  "checks": 205,
+  "failed": 0,
+  "restarts": 2,
+  "results": [
+    {
+      "method": "GET",
+      "path": "/api/students",
+      "expected": 200,
+      "status": 200,
+      "request": null,
+      "response": {
+        "success": true,
+        "message": "Student list retrieved",
+        "data": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/api/students",
+      "expected": 201,
+      "status": 201,
+      "request": {
+        "name": "Иван",
+        "surname": "Иванов",
+        "faculty": "ИТ",
+        "age": 25
+      },
+      "response": {
+        "success": true,
+        "message": "Student created",
+        "data": {
+          "id": 1,
+          "name": "Иван",
+          "surname": "Иванов",
+          "faculty": "ИТ",
+          "age": 25
+        }
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/api/students/1",
+      "expected": 200,
+      "status": 200,
+      "request": null,
+      "response": {
+        "success": true,
+        "message": "Student retrieved",
+        "data": {
+          "id": 1,
+          "name": "Иван",
+          "surname": "Иванов",
+          "faculty": "ИТ",
+          "age": 25
+        }
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/api/students",
+      "expected": 400,
+      "status": 400,
+      "request": {
+        "id": 1,
+        "name": "Перезапись",
+        "surname": "Иванов",
+        "faculty": "ИТ",
+        "age": 25
+      },
+      "response": {
+        "success": false,
+        "message": "id: must be null",
+        "data": null
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/api/students",
+      "expected": 400,
+      "status": 400,
+      "request": {
+        "name": "Иван",
+        "surname": "Иванов",
+        "faculty": "ИТ",
+        "age": 25
+      },
+      "response": {
+        "success": false,
+        "message": "id: must not be null",
+        "data": null
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/api/students",
+      "expected": 404,
+      "status": 404,
+      "request": {
+        "name": "Иван",
+        "surname": "Иванов",
+        "faculty": "ИТ",
+        "age": 25,
+        "id": 999999
+      },
+      "response": {
+        "success": false,
+        "message": "Student with id=999999 was not found",
+        "data": null
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/students/999999",
+      "expected": 404,
+      "status": 404,
+      "request": null,
+      "response": {
+        "success": false,
+        "message": "Student with id=999999 was not found",
+        "data": null
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/api/students",
+      "expected": 400,
+      "status": 400,
+      "request": {
+        "name": " ",
+        "surname": "Иванов",
+        "faculty": "ИТ",
+        "age": 25
+      },
+      "response": {
+        "success": false,
+        "message": "name: must not be blank",
+        "data": null
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/api/students",
+      "expected": 400,
+      "status": 400,
+      "request": {
+        "name": "Иван",
+        "surname": "Иванов",
+        "faculty": "ИТ",
+        "age": 25,
+        "unexpected": true
+      },
+      "response": {
+        "success": false,
+        "message": "Invalid or missing JSON body",
+        "data": null
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/api/students",
+      "expected": 400,
+      "status": 400,
+      "request": "{",
+      "response": {
+        "success": false,
+        "message": "Invalid or missing JSON body",
+        "data": null
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/api/students/-1",
+      "expected": 400,
+      "status": 400,
+      "request": null,
+      "response": {
+        "success": false,
+        "message": "Invalid request parameters",
+        "data": null
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/api/students",
+      "expected": 415,
+      "status": 415,
+      "request": "text",
+      "response": {
+        "success": false,
+        "message": "Use Content-Type: application/json",
+        "data": null
+      }
+    },
+    {
+      "method": "PATCH",
+      "path": "/api/students",
+      "expected": 405,
+      "status": 405,
+      "request": null,
+      "response": {
+        "success": false,
+        "message": "HTTP method is not supported for this endpoint",
+        "data": null
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/api/students",
+      "expected": 200,
+      "status": 200,
+      "request": {
+        "id": 1,
+        "name": "Обновлено",
+        "surname": "Иванов",
+        "faculty": "ИТ",
+        "age": 25
+      },
+      "response": {
+        "success": true,
+        "message": "Student updated",
+        "data": {
+          "id": 1,
+          "name": "Обновлено",
+          "surname": "Иванов",
+          "faculty": "ИТ",
+          "age": 25
+        }
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/api/students",
+      "expected": 200,
+      "status": 200,
+      "request": null,
+      "response": {
+        "success": true,
+        "message": "Student list retrieved",
+        "data": [
+          {
+            "id": 1,
+            "name": "Обновлено",
+            "surname": "Иванов",
+            "faculty": "ИТ",
+            "age": 25
+          }
+        ]
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/api/disciplines",
+      "expected": 200,
+      "status": 200,
+      "request": null,
+      "response": {
+        "success": true,
+        "message": "Discipline list retrieved",
+        "data": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/api/disciplines",
+      "expected": 201,
+      "status": 201,
+      "request": {
+        "name": "Базы данных",
+        "semester": 3,
+        "hours": 72
+      },
+      "response": {
+        "success": true,
+        "message": "Discipline created",
+        "data": {
+          "id": 1,
+          "name": "Базы данных",
+          "semester": 3,
+          "hours": 72
+        }
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/api/disciplines/1",
+      "expected": 200,
+      "status": 200,
+      "request": null,
+      "response": {
+        "success": true,
+        "message": "Discipline retrieved",
+        "data": {
+          "id": 1,
+          "name": "Базы данных",
+          "semester": 3,
+          "hours": 72
+        }
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/api/disciplines",
+      "expected": 400,
+      "status": 400,
+      "request": {
+        "id": 1,
+        "name": "Перезапись",
+        "semester": 3,
+        "hours": 72
+      },
+      "response": {
+        "success": false,
+        "message": "id: must be null",
+        "data": null
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/api/disciplines",
+      "expected": 400,
+      "status": 400,
+      "request": {
+        "name": "Базы данных",
+        "semester": 3,
+        "hours": 72
+      },
+      "response": {
+        "success": false,
+        "message": "id: must not be null",
+        "data": null
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/api/disciplines",
+      "expected": 404,
+      "status": 404,
+      "request": {
+        "name": "Базы данных",
+        "semester": 3,
+        "hours": 72,
+        "id": 999999
+      },
+      "response": {
+        "success": false,
+        "message": "Discipline with id=999999 was not found",
+        "data": null
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/disciplines/999999",
+      "expected": 404,
+      "status": 404,
+      "request": null,
+      "response": {
+        "success": false,
+        "message": "Discipline with id=999999 was not found",
+        "data": null
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/api/disciplines",
+      "expected": 400,
+      "status": 400,
+      "request": {
+        "name": " ",
+        "semester": 3,
+        "hours": 72
+      },
+      "response": {
+        "success": false,
+        "message": "name: must not be blank",
+        "data": null
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/api/disciplines",
+      "expected": 400,
+      "status": 400,
+      "request": {
+        "name": "Базы данных",
+        "semester": 3,
+        "hours": 72,
+        "unexpected": true
+      },
+      "response": {
+        "success": false,
+        "message": "Invalid or missing JSON body",
+        "data": null
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/api/disciplines",
+      "expected": 400,
+      "status": 400,
+      "request": "{",
+      "response": {
+        "success": false,
+        "message": "Invalid or missing JSON body",
+        "data": null
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/api/disciplines/-1",
+      "expected": 400,
+      "status": 400,
+      "request": null,
+      "response": {
+        "success": false,
+        "message": "Invalid request parameters",
+        "data": null
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/api/disciplines",
+      "expected": 415,
+      "status": 415,
+      "request": "text",
+      "response": {
+        "success": false,
+        "message": "Use Content-Type: application/json",
+        "data": null
+      }
+    },
+    {
+      "method": "PATCH",
+      "path": "/api/disciplines",
+      "expected": 405,
+      "status": 405,
+      "request": null,
+      "response": {
+        "success": false,
+        "message": "HTTP method is not supported for this endpoint",
+        "data": null
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/api/disciplines",
+      "expected": 200,
+      "status": 200,
+      "request": {
+        "id": 1,
+        "name": "Обновлено",
+        "semester": 3,
+        "hours": 72
+      },
+      "response": {
+        "success": true,
+        "message": "Discipline updated",
+        "data": {
+          "id": 1,
+          "name": "Обновлено",
+          "semester": 3,
+          "hours": 72
+        }
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/api/disciplines",
+      "expected": 200,
+      "status": 200,
+      "request": null,
+      "response": {
+        "success": true,
+        "message": "Discipline list retrieved",
+        "data": [
+          {
+            "id": 1,
+            "name": "Обновлено",
+            "semester": 3,
+            "hours": 72
+          }
+        ]
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/api/students/1",
+      "expected": 200,
+      "status": 200,
+      "request": null,
+      "response": {
+        "success": true,
+        "message": "Student retrieved",
+        "data": {
+          "id": 1,
+          "name": "Обновлено",
+          "surname": "Иванов",
+          "faculty": "ИТ",
+          "age": 25
+        }
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/students/1",
+      "expected": 200,
+      "status": 200,
+      "request": null,
+      "response": {
+        "success": true,
+        "message": "Student deleted",
+        "data": 1
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/students/1",
+      "expected": 404,
+      "status": 404,
+      "request": null,
+      "response": {
+        "success": false,
+        "message": "Student with id=1 was not found",
+        "data": null
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/api/students/1",
+      "expected": 404,
+      "status": 404,
+      "request": null,
+      "response": {
+        "success": false,
+        "message": "Student with id=1 was not found",
+        "data": null
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/api/disciplines/1",
+      "expected": 200,
+      "status": 200,
+      "request": null,
+      "response": {
+        "success": true,
+        "message": "Discipline retrieved",
+        "data": {
+          "id": 1,
+          "name": "Обновлено",
+          "semester": 3,
+          "hours": 72
+        }
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/disciplines/1",
+      "expected": 200,
+      "status": 200,
+      "request": null,
+      "response": {
+        "success": true,
+        "message": "Discipline deleted",
+        "data": 1
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/disciplines/1",
+      "expected": 404,
+      "status": 404,
+      "request": null,
+      "response": {
+        "success": false,
+        "message": "Discipline with id=1 was not found",
+        "data": null
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/api/disciplines/1",
+      "expected": 404,
+      "status": 404,
+      "request": null,
+      "response": {
+        "success": false,
+        "message": "Discipline with id=1 was not found",
+        "data": null
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/api/students",
+      "expected": 200,
+      "status": 200,
+      "request": null,
+      "response": {
+        "success": true,
+        "message": "Student list retrieved",
+        "data": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/api/disciplines",
+      "expected": 200,
+      "status": 200,
+      "request": null,
+      "response": {
+        "success": true,
+        "message": "Discipline list retrieved",
+        "data": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/api/unknown",
+      "expected": 404,
+      "status": 404,
+      "request": null,
+      "response": {
+        "success": false,
+        "message": "API endpoint was not found",
+        "data": null
+      }
+    }
+  ]
+}

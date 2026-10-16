@@ -1,0 +1,47 @@
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::               (v3.5.16)
+
+2026-10-14T21:45:00.229+05:00  INFO 79384 --- [labwork6] [           main] com.ustmd.labwork6.Labwork6Application   : Starting Labwork6Application v0.0.1-SNAPSHOT using Java 24.0.1 with PID 79384 (/Users/koral/Documents/ChatGPT/urfu-programming/labwork6/target/labwork6-0.0.1-SNAPSHOT.jar started by koral in /Users/koral/Documents/ChatGPT/urfu-programming/labwork6)
+2026-10-14T21:45:00.230+05:00  INFO 79384 --- [labwork6] [           main] com.ustmd.labwork6.Labwork6Application   : The following 1 profile is active: "demo"
+2026-10-14T21:45:00.682+05:00  INFO 79384 --- [labwork6] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-14T21:45:00.698+05:00  INFO 79384 --- [labwork6] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9 ms. Found 0 JPA repository interfaces.
+2026-10-14T21:45:01.001+05:00  INFO 79384 --- [labwork6] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-10-14T21:45:01.012+05:00  INFO 79384 --- [labwork6] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-14T21:45:01.012+05:00  INFO 79384 --- [labwork6] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.55]
+2026-10-14T21:45:01.031+05:00  INFO 79384 --- [labwork6] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-10-14T21:45:01.032+05:00  INFO 79384 --- [labwork6] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 777 ms
+2026-10-14T21:45:01.164+05:00  INFO 79384 --- [labwork6] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-10-14T21:45:01.264+05:00  INFO 79384 --- [labwork6] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:file:./testdb/students user=SA
+2026-10-14T21:45:01.265+05:00  INFO 79384 --- [labwork6] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-10-14T21:45:01.311+05:00  INFO 79384 --- [labwork6] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-10-14T21:45:01.330+05:00  INFO 79384 --- [labwork6] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.53.Final
+2026-10-14T21:45:01.345+05:00  INFO 79384 --- [labwork6] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-10-14T21:45:01.451+05:00  INFO 79384 --- [labwork6] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-14T21:45:01.484+05:00  INFO 79384 --- [labwork6] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-14T21:45:01.795+05:00  INFO 79384 --- [labwork6] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-14T21:45:01.811+05:00  INFO 79384 --- [labwork6] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-14T21:45:02.157+05:00  INFO 79384 --- [labwork6] [           main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:./testdb/students'
+2026-10-14T21:45:02.214+05:00  INFO 79384 --- [labwork6] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-10-14T21:45:02.224+05:00  INFO 79384 --- [labwork6] [           main] com.ustmd.labwork6.Labwork6Application   : Started Labwork6Application in 2.24 seconds (process running for 2.508)
+2026-10-14T21:45:17.712+05:00  INFO 79384 --- [labwork6] [0.1-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-10-14T21:45:17.712+05:00  INFO 79384 --- [labwork6] [0.1-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-10-14T21:45:17.713+05:00  INFO 79384 --- [labwork6] [0.1-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-10-14T21:56:26.080+05:00  INFO 79384 --- [labwork6] [ionShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-10-14T21:56:26.083+05:00  INFO 79384 --- [labwork6] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-10-14T21:56:26.086+05:00  INFO 79384 --- [labwork6] [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-10-14T21:56:26.088+05:00  INFO 79384 --- [labwork6] [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-10-14T21:56:26.178+05:00  INFO 79384 --- [labwork6] [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
